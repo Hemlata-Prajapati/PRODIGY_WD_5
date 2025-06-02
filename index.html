@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-container">
+      <label for="theme-toggle" class="toggle-label">Dark Mode</label>
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+    </div>
+
+    <!-- App Title -->
+    <h1>Weather Dashboard</h1>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <div class="button-group">
+        <button id="search-btn">Search</button>
+        <button id="location-btn">Use Location</button>
+      </div>
+    </div>
+
+    <!-- Weather Info -->
+    <div id="weather-info" class="weather-section hidden">
+      <div class="weather-card">
+        <h2 id="location"></h2>
+
+        <!-- Weather Icon -->
+        <i id="weather-icon" class="wi wi-day-sunny"></i>
+
+        <p id="description"></p>
+        <p id="temperature"></p>
+
+        <div class="details-grid">
+          <div><i class="wi wi-humidity"></i> <span id="humidity"></span></div>
+          <div><i class="wi wi-strong-wind"></i> <span id="wind"></span></div>
+          <div><i class="wi wi-cloudy"></i> <span id="cloudiness"></span></div>
+          <div><i class="wi wi-barometer"></i> <span id="pressure"></span></div>
+          <div><i class="wi wi-sunrise"></i> <span id="sunrise"></span></div>
+          <div><i class="wi wi-sunset"></i> <span id="sunset"></span></div>
+        </div>
+
+        <div id="rainy-message" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
